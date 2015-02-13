@@ -1,0 +1,495 @@
+<html>
+<head>
+    <title>360 View</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link style="text/css" href="css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/360.js"></script>
+    <script type="text/javascript" src="js/Main.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script type="text/javascript">
+	window.onload = function(){
+		document.body.addEventListener('touchmove', function(e){e.preventDefault();},false);
+		var div = document.body;
+		var style = 'imgDiv';
+		var imgFolder = 'img/';
+		var imgCount = 67;
+		LoadImg();
+		popup = document.createElement('img');
+		closeBut = document.createElement('img');
+		black = document.createElement('div');
+		black.className = 'black';
+		popup.className = 'popup';
+		closeBut.className = 'close';
+		closeBut.src = 'btn1.png';
+		popup.style.opacity = 0;
+		closeBut.style.opacity = 0;
+		text1 = document.createElement('img');
+		text1.className = 'img';
+		text1.src = 'text1.png';
+		text1.style.height = '400px';
+		text2 = document.createElement('img');
+		text2.className = 'img';
+		text2.src = 'text2.png';
+		text1.style.height = '246px';
+		text4 = document.createElement('img');
+		text4.className = 'img';
+		text4.src = 'text4.png';
+		text1.style.height = '304px';
+		text6 = document.createElement('img');
+		text6.className = 'img';
+		text6.src = 'text6.png';
+		text1.style.height = '234px';
+		text7 = document.createElement('img');
+		text7.className = 'img';
+		text7.src = 'text7.png';
+		text1.style.height = '234px';
+	        croller = document.createElement('div');
+		croller.className = 'croller';
+		croller.style.height = '169px';
+		show = document.createElement('img');
+		show .className = 'show';
+		show.src = 'scroll.png';
+		document.body.appendChild(show);
+		//black.addEventListener('touchmove', function(e){e.preventDefault();},false);
+		//popup.addEventListener('touchmove', function(e){e.preventDefault();},false);
+		closeBut.addEventListener('click', ClosePopup,false);
+		rotate = new Move360(div,imgFolder,imgCount,style);
+		
+	} 
+    </script>
+</head>
+    <body>
+	<!-- Map -->
+	<map name="0">
+	    <area shape="rect" coords="256,155,456,252" onclick="rotate.RotateTo(7)" >
+	    <area shape="rect" coords="458,200,802,301" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="539,535,818,632" onclick="rotate.RotateTo(9)">
+	</map>
+	<map name="1">
+	    <area shape="rect" coords="256,155,456,252" onclick="rotate.RotateTo(7)">
+	    <area shape="rect" coords="458,200,802,301" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="539,535,818,632" onclick="rotate.RotateTo(9)">
+	</map>
+	<map name="2">
+	    <area shape="rect" coords="627,523,839,617" onclick="rotate.RotateTo(9)">
+	    <area shape="rect" coords="209,315,490,406" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="327,123,570,209" onclick="rotate.RotateTo(7)">
+	    <area shape="rect" coords="574,201,869,301" onclick="rotate.RotateTo(8)">
+	</map>
+	<map name="3">
+	    <area shape="rect" coords="627,523,839,617" onclick="rotate.RotateTo(9)">
+	    <area shape="rect" coords="209,315,490,406" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="327,123,570,209" onclick="rotate.RotateTo(7)">
+	    <area shape="rect" coords="574,201,869,301" onclick="rotate.RotateTo(8)">
+	</map>
+	<map name="4">
+	    <area shape="rect" coords="627,523,839,617" onclick="rotate.RotateTo(9)">
+	    <area shape="rect" coords="209,315,490,406" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="327,123,570,209" onclick="rotate.RotateTo(7)">
+	    <area shape="rect" coords="574,201,869,301" onclick="rotate.RotateTo(8)">
+	</map>
+	<map name="5">
+	    <area shape="rect" coords="245,313,436,399" onclick="rotate.RoateTo(5)">
+	    <area shape="rect" coords="700,513,883,605" onclick="rotate.RoateTo(9)">
+	    <area shape="rect" coords="710,202,893,302" onclick="rotate.RoateTo(8)">
+	    <area shape="rect" coords="437,134,641,221" onclick="rotate.RoateTo(7)">
+	</map>
+	<map name="6">
+	    <area shape="rect" coords="317,528,583,625" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="280,317,582,407" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="236,225,562,313" onclick="rotate.RotateTo(4)">
+	    <area shape="rect" coords="733,511,968,606" onclick="rotate.RotateTo(9)">
+	    <area shape="rect" coords="742,221,974,315" onclick="rotate.RotateTo(8)">
+	    <area shape="rect" coords="516,127,806,217" onclick="rotate.RotateTo(7)">
+	</map>
+	<map name="7">
+	    <area shape="rect" coords="317,528,583,625" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="280,317,582,407" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="236,225,562,313" onclick="rotate.RotateTo(4)">
+	    <area shape="rect" coords="733,511,968,606" onclick="rotate.RotateTo(9)">
+	    <area shape="rect" coords="742,221,974,315" onclick="rotate.RotateTo(8)">
+	    <area shape="rect" coords="516,127,806,217" onclick="rotate.RotateTo(7)">
+	</map>
+	<map name="8">
+	    <area shape="rect" coords="317,528,583,625" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="280,317,582,407" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="236,225,562,313" onclick="rotate.RotateTo(4)">
+	    <area shape="rect" coords="733,511,968,606" onclick="rotate.RotateTo(9)">
+	    <area shape="rect" coords="742,221,974,315" onclick="rotate.RotateTo(8)">
+	    <area shape="rect" coords="516,127,806,217" onclick="rotate.RotateTo(7)">
+	</map>
+	<map name="9">
+	    <area shape="rect" coords="304,216,481,299" onclick="rotate.RotateTo(4)">
+	    <area shape="rect" coords="361,312,517,406" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="366,542,564,642" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="773,499,975,600" onclick="rotate.RotateTo(9)">
+	    <area shape="rect" coords="646,134,826,221" onclick="rotate.RotateTo(7)">
+	    <area shape="rect" coords="824,223,998,333" onclick="rotate.RotateTo(8)">
+	</map>
+	<map name="10">
+	    <area shape="rect" coords="383,551,564,638" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="784,505,926,594" onclick="rotate.RotateTo(9)">
+	    <area shape="rect" coords="848,241,1002,326" onclick="rotate.RotateTo(8)">
+	    <area shape="rect" coords="691,136,847,225" onclick="rotate.RotateTo(7)">
+	    <area shape="rect" coords="380,304,533,396" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="312,219,533,288" onclick="rotate.RotateTo(4)">
+	    <area shape="rect" coords="282,91,463,168" onclick="rotate.RotateTo(2)">
+	</map>
+	<map name="11">
+	    <area shape="rect" coords="791,500,929,576" onclick="rotate.RotateTo(9)">
+	    <area shape="rect" coords="860,246,1003,330" onclick="rotate.RotateTo(8)">
+	    <area shape="rect" coords="724,165,875,232" onclick="rotate.RotateTo(7)">
+	    <area shape="rect" coords="404,556,561,639" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="424,310,579,392" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="356,222,544,281" onclick="rotate.RotateTo(4)">
+	    <area shape="rect" coords="255,147,473,201" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="288,92,521,143" onclick="rotate.RotateTo(2)">
+	</map>
+	<map name="12">
+	    <area shape="rect" coords="293,145,509,209" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="302,85,487,138" onclick="rotate.RotateTo(2)">
+	    <area shape="rect" coords="389,219,593,285" onclick="rotate.RotateTo(4)">
+	    <area shape="rect" coords="470,301,621,391" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="417,553,635,651" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="782,492,909,572" onclick="rotate.RotateTo(9)">
+	    <area shape="rect" coords="745,155,912,244" onclick="rotate.RotateTo(7)">
+	</map>
+	<map name="13">
+	    <area shape="rect" coords="775,150,984,260" onclick="rotate.RotateTo(7)">
+	    <area shape="rect" coords="443,543,790,651" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="490,298,812,399" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="412,200,707,287" onclick="rotate.RotateTo(4)">
+	    <area shape="rect" coords="323,133,651,198" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="321,50,653,130" onclick="rotate.RotateTo(2)">
+	</map>
+	<map name="14">
+	    <area shape="rect" coords="775,150,984,260" onclick="rotate.RotateTo(7)">
+	    <area shape="rect" coords="443,543,790,651" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="490,298,812,399" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="412,200,707,287" onclick="rotate.RotateTo(4)">
+	    <area shape="rect" coords="323,133,651,198" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="321,50,653,130" onclick="rotate.RotateTo(2)">
+	</map>
+	<map name="15">
+	    <area shape="rect" coords="775,150,984,260" onclick="rotate.RotateTo(7)">
+	    <area shape="rect" coords="443,543,790,651" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="490,298,812,399" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="412,200,707,287" onclick="rotate.RotateTo(4)">
+	    <area shape="rect" coords="323,133,651,198" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="321,50,653,130" onclick="rotate.RotateTo(2)">
+	</map>
+	<map name="16">
+	    <area shape="rect" coords="775,150,984,260" onclick="rotate.RotateTo(7)">
+	    <area shape="rect" coords="443,543,790,651" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="490,298,812,399" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="412,200,707,287" onclick="rotate.RotateTo(4)">
+	    <area shape="rect" coords="323,133,651,198" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="321,50,653,130" onclick="rotate.RotateTo(2)">
+	</map>
+	<map name="17">
+	    <area shape="rect" coords="775,150,984,260" onclick="rotate.RotateTo(7)">
+	    <area shape="rect" coords="443,543,790,651" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="490,298,812,399" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="412,200,707,287" onclick="rotate.RotateTo(4)">
+	    <area shape="rect" coords="323,133,651,198" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="321,50,653,130" onclick="rotate.RotateTo(2)">
+	</map>
+	<map name="18">
+	    <area shape="rect" coords="775,150,984,260" onclick="rotate.RotateTo(7)">
+	    <area shape="rect" coords="443,543,790,651" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="490,298,812,399" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="412,200,707,287" onclick="rotate.RotateTo(4)">
+	    <area shape="rect" coords="323,133,651,198" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="321,50,653,130" onclick="rotate.RotateTo(2)">
+	</map>
+	<map name="19">
+	    <area shape="rect" coords="587,517,920,650" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="619,297,967,392" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="578,206,920,296" onclick="rotate.RotateTo(4)">
+	    <area shape="rect" coords="550,116,910,205" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="427,13,878,118" onclick="rotate.RotateTo(2)">
+	</map>
+	<map name="20">
+	    <area shape="rect" coords="587,517,920,650" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="619,297,967,392" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="578,206,920,296" onclick="rotate.RotateTo(4)">
+	    <area shape="rect" coords="550,116,910,205" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="427,13,878,118" onclick="rotate.RotateTo(2)">
+	</map>
+	<map name="21">
+	    <area shape="rect" coords="587,517,920,650" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="619,297,967,392" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="578,206,920,296" onclick="rotate.RotateTo(4)">
+	    <area shape="rect" coords="550,116,910,205" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="427,13,878,118" onclick="rotate.RotateTo(2)">
+	</map>
+	<map name="22">
+	    <area shape="rect" coords="587,517,920,650" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="619,297,967,392" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="578,206,920,296" onclick="rotate.RotateTo(4)">
+	    <area shape="rect" coords="550,116,910,205" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="427,13,878,118" onclick="rotate.RotateTo(2)">
+	</map>
+	<map name="23">
+	    <area shape="rect" coords="587,517,920,650" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="619,297,967,392" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="578,206,920,296" onclick="rotate.RotateTo(4)">
+	    <area shape="rect" coords="550,116,910,205" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="427,13,878,118" onclick="rotate.RotateTo(2)">
+	</map>
+	<map name="24">
+	    <area shape="rect" coords="587,517,920,650" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="619,297,967,392" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="578,206,920,296" onclick="rotate.RotateTo(4)">
+	    <area shape="rect" coords="550,116,910,205" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="427,13,878,118" onclick="rotate.RotateTo(2)">
+	</map>
+	<map name="25">
+	    <area shape="rect" coords="587,517,920,650" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="619,297,967,392" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="578,206,920,296" onclick="rotate.RotateTo(4)">
+	    <area shape="rect" coords="550,116,910,205" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="427,13,878,118" onclick="rotate.RotateTo(2)">
+	</map>
+	<map name="26">
+	    <area shape="rect" coords="587,517,920,650" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="619,297,967,392" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="578,206,920,296" onclick="rotate.RotateTo(4)">
+	    <area shape="rect" coords="550,116,910,205" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="427,13,878,118" onclick="rotate.RotateTo(2)">
+	</map>
+	<map name="27">
+	    <area shape="rect" coords="746,516,991,627" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="750,308,980,423" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="753,161,963,257" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="596,42,945,148" onclick="rotate.RotateTo(2)">
+	</map>
+	<map name="28">
+	    <area shape="rect" coords="746,516,991,627" onclick="rotate.RotateTo(6)">
+	    <area shape="rect" coords="750,308,980,423" onclick="rotate.RotateTo(5)">
+	    <area shape="rect" coords="753,161,963,257" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="596,42,945,148" onclick="rotate.RotateTo(2)">
+	</map>
+	<map name="29">
+	    <area shape="rect" coords="625,75,820,162" onclick="rotate.RotateTo(2)">
+	    <area shape="rect" coords="802,176,967,267" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="711,307,924,415" onclick="rotate.RotateTo(5)">
+	</map>
+	<map name="30">
+	    <area shape="rect" coords="624,63,858,165" onclick="rotate.RotateTo(2)">
+	    <area shape="rect" coords="789,173,974,271" onclick="rotate.RotateTo(3)">
+	</map>
+	<map name="31">
+	    <area shape="rect" coords="795,170,951,293" onclick="rotate.RotateTo(3)">
+	</map>
+	<map name="32">
+	    <area shape="rect" coords="747,167,962,292" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="177,139,533,277" onclick="rotate.RotateTo(0)">
+	</map>
+	<map name="33">
+	    <area shape="rect" coords="747,167,962,292" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="177,139,533,277" onclick="rotate.RotateTo(0)">
+	</map>
+	<map name="34">
+	    <area shape="rect" coords="747,167,962,292" onclick="rotate.RotateTo(3)">
+	    <area shape="rect" coords="177,139,533,277" onclick="rotate.RotateTo(0)">
+	</map>
+	
+	<MAP NAME="35">
+		<AREA SHAPE="RECT" COORDS="301,136,518,245" onclick="rotate.RotateTo(0)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="744,204,924,304" onclick="rotate.RotateTo(3)" TITLE="">
+	</MAP>
+	
+	
+	<MAP NAME="36">
+		<AREA SHAPE="RECT" COORDS="351,130,617,241" onclick="rotate.RotateTo(0)" TITLE="">
+	</MAP>
+	
+	
+	<MAP NAME="37">
+		<AREA SHAPE="RECT" COORDS="405,120,664,246" onclick="rotate.RotateTo(0)" TITLE="">
+	</MAP>
+	
+	
+	<MAP NAME="38">
+		<AREA SHAPE="RECT" COORDS="220,97,414,212" onclick="rotate.RotateTo(1)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="489,112,711,245" onclick="rotate.RotateTo(0)" TITLE="">
+	</MAP>
+	
+	
+	<MAP NAME="39">
+		<AREA SHAPE="RECT" COORDS="253,89,467,207" onclick="rotate.RotateTo(1)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="537,115,767,243" onclick="rotate.RotateTo(0)" TITLE="">
+	</MAP>
+	
+	
+	<MAP NAME="40">
+		<AREA SHAPE="RECT" COORDS="293,75,514,210" onclick="rotate.RotateTo(1)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="580,124,846,257" onclick="rotate.RotateTo(0)" TITLE="">
+	</MAP>
+	
+	<MAP NAME="41">
+		<AREA SHAPE="RECT" COORDS="353,69,568,201" onclick="rotate.RotateTo(1)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="646,121,865,277" onclick="rotate.RotateTo(0)" TITLE="">
+	</MAP>
+	
+	<MAP NAME="42">
+		<AREA SHAPE="RECT" COORDS="402,75,617,190" onclick="rotate.RotateTo(1)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="715,132,926,265" onclick="rotate.RotateTo(0)" TITLE="">
+	</MAP>
+	
+	
+	<MAP NAME="43">
+		<AREA SHAPE="RECT" COORDS="439,74,655,187" onclick="rotate.RotateTo(1)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="736,144,965,267" onclick="rotate.RotateTo(0)" TITLE="">
+	</MAP>
+	
+	
+	<MAP NAME="44">
+		<AREA SHAPE="RECT" COORDS="486,69,715,190" onclick="rotate.RotateTo(1)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="779,147,1010,275" onclick="rotate.RotateTo(0)" TITLE="">
+	</MAP>
+	
+	<MAP NAME="45">
+		<AREA SHAPE="RECT" COORDS="527,62,778,200" onclick="rotate.RotateTo(1)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="827,158,1019,308" onclick="rotate.RotateTo(0)" TITLE="">
+	</MAP>
+	
+	
+	<MAP NAME="46">
+		<AREA SHAPE="RECT" COORDS="557,58,812,204" onclick="rotate.RotateTo(1)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="829,166,1023,310" onclick="rotate.RotateTo(0)" TITLE="">
+	</MAP>
+	
+	
+	<MAP NAME="47">
+		<AREA SHAPE="RECT" COORDS="620,93,869,203" onclick="rotate.RotateTo(1)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="876,178,1021,305" onclick="rotate.RotateTo(0)" TITLE="">
+	</MAP>
+	
+	
+	<MAP NAME="48">
+		<AREA SHAPE="RECT" COORDS="682,90,902,197" onclick="rotate.RotateTo(1)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="863,202,1023,327" onclick="rotate.RotateTo(0)" TITLE="">
+	</MAP>
+	
+	
+	<MAP NAME="49">
+		<AREA SHAPE="RECT" COORDS="708,91,939,201" onclick="rotate.RotateTo(1)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="839,204,1023,337" onclick="rotate.RotateTo(0)" TITLE="">
+	</MAP>
+	
+	
+	<MAP NAME="50">
+		<AREA SHAPE="RECT" COORDS="739,98,971,211" onclick="rotate.RotateTo(1)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="819,215,1023,341" onclick="rotate.RotateTo(0)" TITLE="">
+	</MAP>
+	
+	
+	<MAP NAME="51">
+		<AREA SHAPE="RECT" COORDS="752,106,989,214" onclick="rotate.RotateTo(1)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="850,222,1023,356" onclick="rotate.RotateTo(0)" TITLE="">
+	</MAP>
+	
+	<MAP NAME="52">
+		<AREA SHAPE="RECT" COORDS="855,229,1021,350" onclick="rotate.RotateTo(0)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="787,108,1012,225" onclick="rotate.RotateTo(1)" TITLE="">
+	</MAP>
+	
+	
+	<MAP NAME="53">
+		<AREA SHAPE="RECT" COORDS="820,232,1020,371" onclick="rotate.RotateTo(0)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="788,103,1019,228" onclick="rotate.RotateTo(1)" TITLE="">
+	</MAP>
+	
+	
+	
+	<MAP NAME="54">
+		<AREA SHAPE="RECT" COORDS="773,120,1006,242" onclick="rotate.RotateTo(1)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="797,250,1007,367" onclick="rotate.RotateTo(0)" TITLE="">
+	</MAP>
+	
+	<MAP NAME="55">
+		<AREA SHAPE="RECT" COORDS="786,135,1006,245" onclick="rotate.RotateTo(1)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="848,252,1018,361" onclick="rotate.RotateTo(0)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="180,473,348,613" onclick="rotate.RotateTo(9)" TITLE="">
+	</MAP>
+	
+	<MAP NAME="56">
+		<AREA SHAPE="RECT" COORDS="813,153,1011,282" onclick="rotate.RotateTo(1)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="169,483,372,608" onclick="rotate.RotateTo(9)" TITLE="">
+	</MAP>
+	
+	
+	<MAP NAME="57">
+		<AREA SHAPE="RECT" COORDS="814,154,1007,281" onclick="rotate.RotateTo(1)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="205,498,371,611" onclick="rotate.RotateTo(9)" TITLE="">
+	</MAP>
+	
+	<MAP NAME="58">
+		<AREA SHAPE="RECT" COORDS="818,162,1004,307" onclick="rotate.RotateTo(1)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="194,509,401,620" onclick="rotate.RotateTo(9)" TITLE="">
+	</MAP>
+	
+	
+	
+	<MAP NAME="59">
+		<AREA SHAPE="RECT" COORDS="814,173,994,306" onclick="rotate.RotateTo(1)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="214,507,443,615" onclick="rotate.RotateTo(9)" TITLE="">
+	</MAP>
+	
+	<MAP NAME="60">
+		<AREA SHAPE="RECT" COORDS="257,507,449,626" onclick="rotate.RotateTo(9)" TITLE="">
+	</MAP>
+	
+	
+	<MAP NAME="61">
+		<AREA SHAPE="RECT" COORDS="297,515,490,641" onclick="rotate.RotateTo(9)" TITLE="">
+	</MAP>
+	
+	
+	<MAP NAME="62">
+		<AREA SHAPE="RECT" COORDS="200,212,393,311" onclick="rotate.RotateTo(8)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="336,512,524,626" onclick="rotate.RotateTo(9)" TITLE="">
+	</MAP>
+	
+	
+	<MAP NAME="63">
+		<AREA SHAPE="RECT" COORDS="244,198,458,306" onclick="rotate.RotateTo(8)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="379,527,555,627" onclick="rotate.RotateTo(9)" TITLE="">
+	</MAP>
+	
+	
+	<MAP NAME="64">
+		<AREA SHAPE="RECT" COORDS="292,210,508,305" onclick="rotate.RotateTo(8)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="417,527,616,625" onclick="rotate.RotateTo(9)" TITLE="">
+	</MAP>
+	
+	
+	<MAP NAME="65">
+		<AREA SHAPE="RECT" COORDS="344,203,575,308" onclick="rotate.RotateTo(8)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="444,531,641,628" onclick="rotate.RotateTo(9)" TITLE="">
+	</MAP>
+	
+	<MAP NAME="66">
+		<AREA SHAPE="RECT" COORDS="366,196,611,305" onclick="rotate.RotateTo(8)" TITLE="">
+		<AREA SHAPE="RECT" COORDS="463,513,663,635" onclick="rotate.RotateTo(9)" TITLE="">
+	</MAP>
+
+	<!-- End Map -->
+	<div id='0' class="button" style="left: 34px; top: 673px; width: 100px; z-index: 4" onclick="rotate.RotateTo(0);"></div>
+    	<div id='1' class="button" style="left: 144px; top: 673px; width: 100px; z-index: 4" onclick="rotate.RotateTo(1);"></div>
+	<div id='2' class="button" style="left: 254px; top: 673px; width: 100px; z-index: 4" onclick="rotate.RotateTo(2);"></div>
+	<div id='3' class="button" style="left: 364px; top: 673px; width: 100px; z-index: 4" onclick="rotate.RotateTo(3);"></div>
+	<div id='4' class="button" style="left: 491px; top: 673px; width: 100px; z-index: 4" onclick="rotate.RotateTo(4);"></div>
+	<div id ='5' class="button" style="left: 594px; top: 673px; width: 100px; z-index: 4" onclick="rotate.RotateTo(5);"></div>
+	<div id ='6' class="button" style="left: 698px; top: 673px; width: 100px; width: 50px; z-index: 4" onclick="rotate.RotateTo(6);"></div>
+	<div id='7' class="button" style="left: 751px; top: 673px; width: 100px; z-index: 4" onclick="rotate.RotateTo(7);"></div>
+	<div id = '8' class="button" style="left: 833px; top: 673px; width: 100px; z-index: 4" onclick="rotate.RotateTo(8);"></div>
+	<div id='9' class="button" style="left: 927px; top: 673px; width: 100px; z-index: 4" onclick="rotate.RotateTo(9);"></div>
+	<!--<div class='croller'>
+	    <img class='img' src='text1.png'/>
+	</div>-->
+    </body>
+</html>
